@@ -11,6 +11,12 @@ document.querySelectorAll("#nav li").forEach(function(navEl) {
   navEl.onclick = function() {
     toggleTab(this.id, this.dataset.target);
   };
+
+  navEl.onkeydown = function(event) {
+    if (event.key === 'Enter') {
+      toggleTab(this.id, this.dataset.target);
+    }
+  };
 });
 
 function toggleTab(selectedNav, targetId) {
@@ -36,3 +42,17 @@ function toggleTab(selectedNav, targetId) {
     }
   });
 }
+
+function focusCloseModalBtn(modalId, restoreFocusElem) {
+  const closeBtn = document.querySelector(`#${modalId} .modal-close`);
+
+  closeBtn.focus();
+  closeBtn.addEventListener('click', () => {
+    restoreFocusElem.focus();
+  })
+}
+
+document.querySelectorAll(".button.is-link.modal-button").forEach(function(linkEl) {
+  linkEl.addEventListener('click', (event) => focusCloseModalBtn(event.target.dataset.target, linkEl))
+  linkEl.addEventListener('keydown', (event) => event.key === 'Enter' && focusCloseModalBtn(this.dataset.target, linkEl))
+});

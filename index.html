@@ -1,47 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Web Accessibility 2022</title>
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css'>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+  <link rel="preconnect" href="https://use.fontawesome.com/" crossorigin>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css'>
   <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.10/css/all.css'>
-  <link rel="stylesheet prefetch" href="css/styles.css">
+  <link rel="stylesheet preload" as="style" href="css/styles.css">
+
 </head>
 
 <body>
-  <div class="hero">
+  <header class="hero">
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
     <div class="hero-head">
-      <div class="navbar">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="container">
           <div class="navbar-brand">
             <a href="/" class="navbar-item logo-link">
-              <img src="./img/logo.png">
+              <img src="./img/logo.png" alt="Home">
             </a>
-            <button class="navbar-burger burger" data-target="navbarMenu">
+            <a class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
               <span></span>
               <span></span>
               <span></span>
-            </button>
+            </a>
           </div>
 
           <div id="navbarMenu" class="navbar-menu">
             <ul class="navbar-end">
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
+              <li class="navbar-item">
+                <button class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fa fa-home"></i>
                   </span>
                   <span>Home</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined with-sublist">
+                </button>
+              </li>
+              <li class="navbar-item">
+                <button class="button is-white is-outlined with-sublist">
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
                   <span>Services</span>
-                </a>
+                </button>
                 <ul class="sublist hidden">
                   <li>Design</li>
                   <li>Consult</li>
@@ -49,457 +54,511 @@
                   <li>Operate</li>
                   <li>Optimize</li>
                 </ul>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
+              </li>
+              <li class="navbar-item">
+                <button class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
                   <span>Success stories</span>
-                </a>
-              </span>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined">
+                </button>
+              </li>
+              <li class="navbar-item">
+                <button class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>View Source</span>
-                </a>
-              </span>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
-  </div>
-
-  <div class="hero-bg hero-body is-fullheight">
-    <div class="container has-text-centered">
-      <div class="column is-10 is-offset-1">
-        <div class="title has-text-white">We have web accessibility in mind</div>
-      </div>
+    <div class="hero-foot">
+      <nav class="breadcrumb has-background-light" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="#">Bulma</a></li>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Components</a></li>
+          <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="section" id="subscription">
-    <div class="section-heading has-text-centered">
-      <div class="column is-8 is-offset-2">
-      <div class="title is-2">Would you like to get the latest news?</div>
-        <div class="subtitle is-5">Subscribe to our events, updates and more</div>
-      <div class="box has-background-grey-light">
-        <div class="field is-grouped">
-          <p class="control is-expanded">
-            <input class="input">
-          </p>
-          <p class="control">
-            <a class="button is-info">Notify Me</a>
-          </p>
+  <main id="main-content">
+    <div class="hero-bg hero-body is-fullheight">
+      <div class="container has-text-centered">
+        <div class="column is-10 is-offset-1">
+          <h1 class="title has-text-white">We have web accessibility in mind</h1>
         </div>
       </div>
-      </div>
     </div>
 
-  <div class="section" id="about">
-    <div class="section-heading has-text-centered">
-      <div class="title is-2">About Us</div>
-      <div class="subtitle is-5">We of all trades, master of "some"</div>
-      <div class="container">
-        <p>Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
-          field of
-          <b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Coffee</b>.
-          Looking for an opportunity to work and upgrade, as well as being involved in an organization that
-          believes
-          in gaining a competitive edge and giving back to the community.</p>
-      </div>
-    </div>
-
-    <div class="content container">
-      <div class="is-1 title">OUR HISTORY</div>
-      <p>Since 1989<sup><a>[1]</a></sup>, we deliver high quality solutions to make your business more accessible.</p>
-      <div class="is-2 title">1989</div>
-      <p>On February 1989, seventeen people met to talk, ski, relax, and try to find common ground.</p>
-      <ul>
-        <li>- We all felt privileged to work with a group of people who held a set of compatible value.</li>
-        <li>- We all want to deliver good products to customers.</li>
-      </ul>
-      <div class="is-3 title">2022</div>
-      <p>Generally we have achieved <a>all our major goals</a>. And we are ready to help you to achieve yours</p>
-      <div class="blockquote">Success usually comes to those who are too busy looking for it. - Henry David Thoreau</div>
-      <p>We believe in investing in people. For 30+ years, the company has been expanding its expertise worldwide through numerous educational activities and materials to help beginners in tech gain in-demand skills.</p>
-      <div class="is-2 title">2023</div>
-      <p>Please take a llok at our plans</p>
-      <table>
-        <tr>
-          <td>Header</td>
-          <td>Header</td>
-        </tr>
-        <tr>
-          <td>cell</td>
-          <td>cell</td>
-        </tr>
-        <tr>
-          <td>cell</td>
-          <td>cell</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="hero has-background-grey-light">
-    <div class="container features">
+    <section class="section" id="subscription" aria-label="Subscribe to us">
       <div class="section-heading has-text-centered">
-        <div class="title is-2">Our services</div>
-        <div class="subtitle is-5">We help our customers to increase value</div>
-      </div>
-
-      <figure>
-        <img src="./img/IMG_5067_72DPI-RGB_.jpg">
-        <img src="./img/iStock_73271969_web.jpg">
-        <figcaption>
-          Figure 1: Some attractive pictures to ensure our customers
-        </figcaption>
-      </figure>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero is-info">
-    <div class="hero-body">
-      <div class="container">
-        <div class="title">Our achievements</div>
-        <div class="subtitle">We are always ready to tell you about our success</div>
-      </div>
-    </div>
-    <div class="tabs is-boxed is-centered main-menu" id="nav">
-      <ul>
-        <li data-target="pane-1" id="1" class="is-active">
-          <a>
-            <span class="icon is-small"><i class="fa fa-image"></i></span>
-            <span>Success stories</span>
-          </a>
-        </li>
-        <li data-target="pane-3" id="3">
-          <a>
-            <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
-            <span>Our team</span>
-          </a>
-        </li>
-        <li data-target="pane-4" id="4">
-          <a>
-            <span class="icon is-small"><i class="fa fa-film"></i></span>
-            <span>Video</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="tab-content container">
-    <div class="tab-pane is-active" id="pane-1" class="level">
-      <div class="container">
-        <div class="columns features">
-          <div class="column is-6">
-            <div class="card">
-              <div class="card-image">
-                <div class="image">
-                  <img src="./img/tab-1.jpg" class="modal-button">
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <div>Best customer's story</div>
-                  <p>We have achieved customer satisfaction and income increase after having implemented accessibility.</p>
-                  <p>That's a real magic!</p>
-                  <span class="button is-link modal-button" data-target="modal-image1">Learn more</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-6">
-            <div class="card">
-              <div class="card-image">
-                <div class="image">
-                  <img src="./img/tab-2.jpg">
-                </div>
-              </div>
-              <div class="card-content">
-                <div class="content">
-                  <div>Other Best customer's story.</div>
-                  <p>We were not so sure in success but we have had lots of new customers after implementing accessibility.</p>
-                  <p>We will recommend Best Company to our friends!</p>
-                  <span class="button is-link modal-button" data-target="modal-card">Learn more</span>
-                </div>
-              </div>
+        <div class="column is-8 is-offset-2">
+          <h2 class="title is-2">Would you like to get the latest news?</h2>
+          <p class="pb-2"><label for="notify-control" class="subtitle is-5">Subscribe to our events, updates and more</label></p>
+          <div class="box has-background-grey-light">
+            <div class="field is-grouped">
+              <p class="control is-expanded">
+                <input id="notify-control" class="input" type="email">
+              </p>
+              <p class="control">
+                <button class="button is-info has-background-info-dark">Notify Me</button>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="tab-pane" id="pane-3">
-      <div class="columns medias">
-        <div class="column">
-          <div class="media">
-            <div class="media-left">
-              <i class="fab fa-empire fa-4x"></i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <a><b>Solution architect</b></a>
-                  <br> Please read about our team happiness
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="media">
-            <div class="media-left">
-              <i class="fab fa-github-alt fa-4x"></i>
-            </div>
-            <div class="media-content">
-              <div class="content">
-                <p>
-                  <a><b>Business Analyst</b></a>
-                  <br> Please read about BA growth opportunities
-                </p>
-              </div>
-            </div>
+    <section class="section" id="about" aria-label="About us">
+      <div class="section-heading has-text-centered">
+        <h2 class="title is-2">About Us</h2>
+        <p class="subtitle is-5">We of all trades, master of "some"</p>
+        <div class="container">
+          <p class="pb-4">Web developers with more than <b>4 years</b> of well-rounded experience with a degree in the
+            field of
+            <b>Computer Science</b>, extensive knowledge of modern Web techniques and love for <b>Coffee</b>.
+            Looking for an opportunity to work and upgrade, as well as being involved in an organization that
+            believes
+            in gaining a competitive edge and giving back to the community.</p>
+          <div class="content container has-text-left px-5">
+            <h3 class="is-3 title">OUR HISTORY</h3>
+            <p>Since 1989<sup><a href="https://google.com" target="_blank" aria-label="Check more about 1989 Opens in a new window">[1]<i class="fa fa-external-link-alt pl-1"></i></a></sup>, we deliver high quality solutions to make your business more accessible.</p>
+            <h4 class="is-4 title">1989</h4>
+            <p>On February 1989, seventeen people met to talk, ski, relax, and try to find common ground.</p>
+            <ul>
+              <li>- We all felt privileged to work with a group of people who held a set of compatible value.</li>
+              <li>- We all want to deliver good products to customers.</li>
+            </ul>
+            <h4 class="is-4 title">2022</h4>
+            <p>Generally we have achieved <a href="https://google.com" target="_blank">all our major goals <i class="fa fa-external-link-alt pl-1"></i><span class="sr-only">Opens in a new window</span></a>. And we are ready to help you to achieve yours</p>
+            <div class="blockquote">Success usually comes to those who are too busy looking for it. - Henry David Thoreau</div>
+            <p>We believe in investing in people. For 30+ years, the company has been expanding its expertise worldwide through numerous educational activities and materials to help beginners in tech gain in-demand skills.</p>
+            <h4 class="is-4 title">2023</h4>
+            <p>Please take a llok at our plans</p>
+            <table>
+              <tr>
+                <td>Header</td>
+                <td>Header</td>
+              </tr>
+              <tr>
+                <td>cell</td>
+                <td>cell</td>
+              </tr>
+              <tr>
+                <td>cell</td>
+                <td>cell</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="tab-pane" id="pane-4">
-      <div class="columns is-centered">
-        <div class="column is-three-quarters">
-          <div class="title has-text-centered">Inspired video</div>
-          <div class="embed-container image">
-            <iframe src="https://player.vimeo.com/video/261794608" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section has-background-grey-lighter">
-    <div class="container has-text-centered">
+    <section class="hero has-background-grey-lighter" aria-label="Our services">
+      <div class="container features">
         <div class="section-heading has-text-centered">
-          <div class="title is-2">Upcoming events</div>
-          <div class="subtitle is-5">Outcoming dates for the best options</div>
+          <h2 class="title is-2">Our services</h2>
+          <p class="subtitle is-5">We help our customers to increase value</p>
         </div>
 
-      <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <div class="image">
-              <img src="./img/access.jpg">
+        <figure>
+          <img src="./img/IMG_5067_72DPI-RGB_.jpg" alt="Creating solution">
+          <img src="./img/iStock_73271969_web.jpg" alt="Making progress">
+          <figcaption>
+            Figure 1: Some attractive pictures to ensure our customers
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="hero is-link" aria-label="Our achievements">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Our achievements</h2>
+          <p class="subtitle">We are always ready to tell you about our success</p>
+        </div>
+      </div>
+      <nav class="tabs is-boxed is-centered main-menu" id="nav">
+        <ul>
+          <li tabindex="0" data-target="pane-1" id="1" class="is-active">
+            <a>
+              <span class="icon is-small"><i class="fa fa-image"></i></span>
+              <span>Success stories</span>
+            </a>
+          </li>
+          <li tabindex="0" data-target="pane-3" id="3">
+            <a>
+              <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
+              <span>Our team</span>
+            </a>
+          </li>
+          <li tabindex="0" data-target="pane-4" id="4">
+            <a>
+              <span class="icon is-small"><i class="fa fa-film"></i></span>
+              <span>Video</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <div class="tab-content container">
+      <div class="tab-pane is-active" id="pane-1">
+        <div class="container">
+          <div class="columns features">
+            <div class="column is-6">
+              <div class="card">
+                <div class="card-image">
+                  <div class="image">
+                    <img src="./img/tab-1.jpg" alt="Customer story preview" class="modal-button">
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <h3>Best customer's story</h3>
+                    <p>We have achieved customer satisfaction and income increase after having implemented accessibility.</p>
+                    <p>That's a real magic!</p>
+                    <button class="button is-link modal-button" data-target="modal-image1">Learn more</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p class="title">Accessibility event in Los Angeles</p>
-            <p class="subtitle">Fri 27 Nov 2023</p>
-            <a class="button">Buy Tickets</a>
+            <div class="column is-6">
+              <div class="card">
+                <div class="card-image">
+                  <div class="image">
+                    <img src="./img/tab-2.jpg" alt="Customer story preview">
+                  </div>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <h3>Other Best customer's story.</h3>
+                    <p>We were not so sure in success but we have had lots of new customers after implementing accessibility.</p>
+                    <p>We will recommend Best Company to our friends!</p>
+                    <button class="button is-link modal-button" data-target="modal-card">Learn more</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tile is-parent">
-          <div class="tile is-child box">
-            <div class="image">
-              <img src="./img/images.jpg">
+      </div>
+
+      <div class="tab-pane" id="pane-3">
+        <div class="columns medias">
+          <div class="column">
+            <div class="media">
+              <div class="media-left">
+                <i class="fab fa-empire fa-4x"></i>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <a href="https://google.com"><b>Solution architect</b></a>
+                    <br> Please read about our team happiness
+                  </p>
+                </div>
+              </div>
             </div>
-            <p class="title">Accessibility event in Paris</p>
-            <p class="subtitle">Fri 27 Nov 2023</p>
-            <a class="button">Buy Tickets</a>
+          </div>
+          <div class="column">
+            <div class="media">
+              <div class="media-left">
+                <i class="fab fa-github-alt fa-4x"></i>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <a href="https://google.com"><b>Business Analyst</b></a>
+                    <br> Please read about BA growth opportunities
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="pane-4">
+        <div class="columns is-centered">
+          <div class="column is-three-quarters">
+            <h3 class="title has-text-centered">Inspired video</h3>
+            <div class="embed-container image">
+              <iframe src="https://player.vimeo.com/video/261794608" title="Video player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="section has-background-light">
-    <div class="container">
-      <div class="section-heading has-text-centered">
-        <div class="title is-2">Contact us</div>
-        <div class="subtitle is-5">Don't hesitate, ask anything</div>
-      </div>
-
-      <form class="column is-half is-offset-one-quarter box">
-        <div class="field">
-          <label class="label">Name</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Text input">
-          </div>
+    <section class="section has-background-grey-lighter" aria-label="Upcoming events">
+      <div class="container has-text-centered">
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2">Upcoming events</h2>
+          <p class="subtitle is-5">Out-coming dates for the best options</p>
         </div>
 
-        <div class="field">
-          <label class="label">Username</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text">
-            <span class="icon is-small is-left">
+        <div class="tile is-ancestor">
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <div class="image">
+                <img src="./img/access.jpg" alt="Accessibility event in Los Angeles announce">
+              </div>
+              <h3 class="title">Accessibility event in Los Angeles</h3>
+              <p class="subtitle">Fri 27 Nov 2023</p>
+              <button class="button">Buy Tickets<span class="sr-only">for Accessibility event in Los Angeles</span></button>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <div class="tile is-child box">
+              <div class="image">
+                <img src="./img/images.jpg" alt="Accessibility event in Paris announce">
+              </div>
+              <h3 class="title">Accessibility event in Paris</h3>
+              <p class="subtitle">Fri 27 Nov 2023</p>
+              <button class="button">Buy Tickets <span class="sr-only">for Accessibility event in Paris</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section has-background-light" aria-label="Contact us">
+      <div class="container">
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2">Contact us</h2>
+          <p class="subtitle is-5">Don't hesitate, ask anything</p>
+        </div>
+
+        <form class="column is-half is-offset-one-quarter box">
+          <fieldset>
+            <legend>Info about user</legend>
+            <div class="field">
+              <label class="label" for="name-control">Name</label>
+              <div class="control">
+                <input id="name-control" class="input" type="text" value="some name" placeholder="Name input" aria-label="Name input">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="username-control">Username</label>
+              <div class="control has-icons-left has-icons-right">
+                <input id="username-control" class="input is-success" type="text" value="username" placeholder="Username input" aria-label="Username input">
+                <span class="icon is-small is-left">
               <i class="fas fa-user"></i>
             </span>
-            <span class="icon is-small is-right">
+                <span class="icon is-small is-right">
               <i class="fas fa-check"></i>
             </span>
-          </div>
-          <p class="help is-success">This username is available</p>
-        </div>
+              </div>
+              <p class="help has-text-success-dark">This username is available</p>
+            </div>
 
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-            <span class="icon is-small is-left">
+            <div class="field">
+              <label class="label" for="email-control">Email</label>
+              <div class="control has-icons-left has-icons-right">
+                <input id="email-control"
+                       class="input is-danger"
+                       type="email"
+                       placeholder="Email input"
+                       value="hello@"
+                       aria-invalid="true"
+                       aria-errormessage="username-error"
+                       aria-label="Email input">
+                <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
-            <span class="icon is-small is-right">
+                <span class="icon is-small is-right">
               <i class="fas fa-exclamation-triangle"></i>
             </span>
-          </div>
-          <p class="help is-danger">This email is invalid</p>
-        </div>
-
-        <div class="field">
-          <label class="label">Subject</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
+              </div>
+              <p id="username-error" class="help has-text-danger-dark">This email is invalid</p>
             </div>
-          </div>
-        </div>
+          </fieldset>
 
-        <div class="field">
-          <label class="label">Message</label>
-          <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
-          </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="checkbox">
-              <input type="checkbox">
-              I agree to the <a>terms and conditions</a>
-            </label>
-          </div>
-        </div>
-
-        <div class="field">
-          <div class="control">
-            <label class="radio">
-              <input type="radio" name="question">
-              Yes
-            </label>
-            <label class="radio">
-              <input type="radio" name="question">
-              No
-            </label>
-          </div>
-        </div>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">Submit</button>
-          </div>
-          <div class="control">
-            <button class="button is-text">Cancel</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="container">
-      <div class="section-heading has-text-centered">
-        <div class="title is-2">Forum</div>
-        <div class="subtitle is-5">Discuss any topic with no leaving this page</div>
-      </div>
-      <div class="columns">
-        <div class="column is-3">
-          <a class="button is-primary is-block is-alt is-large">New Post</a>
-        </div>
-        <div class="column is-9">
-          <div class="box content">
-            <div class="post">
-              <h4>How do you center a button in a box?</h4>
-              <div class="media">
-                <div class="media-left">
-                  <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=300">
-                  </p>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <a>@jsmith</a> replied 34 minutes ago &nbsp;
-                      <span class="tag">Question</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 1</span>
+          <fieldset>
+            <legend>Prepare message</legend>
+            <div class="field">
+              <label class="label" for="select-subject">Subject</label>
+              <div class="control">
+                <div class="select">
+                  <select id="select-subject">
+                    <option>Select dropdown</option>
+                    <option>With options</option>
+                  </select>
                 </div>
               </div>
             </div>
 
-            <div class="post">
-              <h4>How can I make a button go full width?</h4>
-              <div class="media">
-                <div class="media-left">
-                  <p class="image is-32x32">
-                    <img src="https://source.unsplash.com/random/64x64/?sig=301">
-                  </p>
-                </div>
-                <div class="media-content">
-                  <div class="content">
-                    <p>
-                      <a>@red</a> replied 40 minutes ago &nbsp;
-                      <span class="tag">Question</span>
+            <div class="field">
+              <label class="label" for="message-control">Message</label>
+              <div class="control">
+                <textarea id="message-control" class="textarea" placeholder="Textarea"></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Confirm terms and conditions</legend>
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  I agree to the <a href="https://google.com" target="_blank">terms and conditions<i class="fa fa-external-link-alt pl-1"></i><span class="sr-only">Opens in a new window</span></a>
+                </label>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="question">
+                  Yes
+                </label>
+                <label class="radio">
+                  <input type="radio" name="question">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Form controls</legend>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" type="submit">Submit</button>
+              </div>
+              <div class="control">
+                <button class="button is-text">Cancel</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Forum">
+      <div class="container">
+        <div class="section-heading has-text-centered">
+          <h2 class="title is-2">Forum</h2>
+          <p class="subtitle is-5">Discuss any topic with no leaving this page</p>
+        </div>
+        <div class="columns">
+          <div class="column is-3 is-flex justify-content-center align-content-center">
+            <button class="button is-primary is-large has-background-info">New Post</button>
+          </div>
+          <div class="column is-9">
+            <div class="box content">
+              <div class="post">
+                <h3>How do you center a button in a box?</h3>
+                <div class="media">
+                  <div class="media-left">
+                    <p class="image is-32x32">
+                      <img src="https://source.unsplash.com/random/64x64/?sig=300" alt="User avatar">
                     </p>
                   </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="https://google.com"><span class="sr-only">Author:</span>@jsmith</a> replied 34 minutes ago &nbsp;
+                        <span class="tag">Question</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-right">
+                    <span class="has-text-grey-dark"><i class="fa fa-comments"></i> 1</span>
+                  </div>
                 </div>
-                <div class="media-right">
-                  <span class="has-text-grey-light"><i class="fa fa-comments"></i> 0</span>
+              </div>
+
+              <div class="post">
+                <h3>How can I make a button go full width?</h3>
+                <div class="media">
+                  <div class="media-left">
+                    <p class="image is-32x32">
+                      <img src="https://source.unsplash.com/random/64x64/?sig=301" alt="User avatar">
+                    </p>
+                  </div>
+                  <div class="media-content">
+                    <div class="content">
+                      <p>
+                        <a href="https://google.com"><span class="sr-only">Author:</span>@red</a> replied 40 minutes ago &nbsp;
+                        <span class="tag">Question</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="media-right">
+                    <span class="has-text-grey-dark"><i class="fa fa-comments"></i> 0</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-4">
-          <div class="is-3 title"><b>News</b></div>
+          <h2 class="is-3 title">News</h2>
           <ul>
-            <li><a>Latest changes in specification</a></li>
-            <li><a>Our new courses and trainings</a></li>
+            <li>
+              <a href="https://google.com" target="_blank">
+                Latest changes in specification<i class="fa fa-external-link-alt pl-1"></i><span class="sr-only">Opens in a new window</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://google.com" target="_blank">
+                Our new courses and trainings<i class="fa fa-external-link-alt pl-1"></i><span class="sr-only">Opens in a new window</span>
+              </a>
+            </li>
           </ul>
         </div>
         <div class="column is-4">
-          <div class="is-3 title"><b>Help</b></div>
+          <h2 class="is-3 title">Help</h2>
           <ul>
-            <li><a>Useful links</a></li>
-            <li><a>How to find us</a></li>
+            <li>
+              <a href="https://google.com" target="_blank">
+                Useful links<i class="fa fa-external-link-alt pl-1"></i><span class="sr-only">Opens in a new window</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://google.com" target="_blank">
+                How to find us<i class="fa fa-external-link-alt pl-1"></i><span class="sr-only">Opens in a new window</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="content has-text-centered">
         <div class="soc">
-          <a><i class="fab fa-github-alt fa-2x"></i></a>
-          <a><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="https://google.com" target="_blank" aria-label="Our Github Opens in a new window">
+            <i class="fab fa-github-alt fa-2x"></i>
+          </a>
+          <a href="https://google.com" target="_blank" aria-label="Our Youtube chanel Opens in a new window">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
         </div>
-        <p>The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.</p>
+        <p>The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">
+            <abbr title="Massachusetts Institute of Technology">MIT</abbr>
+          </a>.
+        </p>
       </div>
     </div>
-  </div>
+  </footer>
 
   <div id="modal-card" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
@@ -507,7 +566,7 @@
       <div class="card">
         <div class="card-image">
           <div class="image is-4by3">
-            <img src="https://source.unsplash.com/random/?sig=2">
+            <img src="https://source.unsplash.com/random/?sig=2" alt="Customer story">
           </div>
         </div>
         <div class="card-content">
@@ -520,22 +579,22 @@
           <div class="content">
             <p>At the beginning we were a small company with two planes and no customers</p>
             <p>After we implemented accessibility features everything changed</p>
-            <a>#responsive</a>
+            <a href="https://google.com"><span class="sr-only">Tag:</span>#responsive</a>
             <br>
             <time datetime="2018-02-02">12:45 AM - 20 June 2018</time>
           </div>
         </div>
       </div>
     </div>
-    <button class="modal-close is-large"></button>
+    <button class="modal-close is-large"><span class="sr-only">Close modal</span></button>
   </div>
 
   <div id="modal-image1" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
-      <img src="https://source.unsplash.com/random/?sig=1">
+      <img src="https://source.unsplash.com/random/?sig=1" alt="Customer story">
     </div>
-    <button class="modal-close is-large"></button>
+    <button class="modal-close is-large"><span class="sr-only">Close modal</span></button>
   </div>
 
   <script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
