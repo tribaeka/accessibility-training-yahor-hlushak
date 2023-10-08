@@ -31,8 +31,8 @@
           </div>
 
           <div id="navbarMenu" class="navbar-menu">
-            <ul class="navbar-end">
-              <li class="navbar-item">
+            <ul class="navbar-end" role="menubar">
+              <li id="menu-1" class="navbar-item">
                 <button class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fa fa-home"></i>
@@ -40,22 +40,24 @@
                   <span>Home</span>
                 </button>
               </li>
-              <li class="navbar-item">
-                <button class="button is-white is-outlined with-sublist" aria-controls="services-dropdown-options" aria-expanded="false">
+              <li id="menu-2" class="navbar-item">
+                <button class="button is-white is-outlined with-sublist"
+                        aria-controls="services-dropdown-options"
+                        aria-expanded="false">
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
                   <span>Services</span>
                 </button>
-                <div id="services-dropdown-options" class="sublist hidden" role="list" aria-hidden="true">
-                  <div role="listitem">Design</div>
-                  <div role="listitem">Consult</div>
-                  <div role="listitem">Engineer</div>
-                  <div role="listitem">Operate</div>
-                  <div role="listitem">Optimize</div>
-                </div>
+                <ul id="services-dropdown-options" role="group" class="sublist hidden" aria-hidden="true">
+                  <li tabindex="0"><a href="#">Design</a></li>
+                  <li tabindex="0"><a href="#">Consult</a></li>
+                  <li tabindex="0"><a href="#">Engineer</a></li>
+                  <li tabindex="0"><a href="#">Operate</a></li>
+                  <li tabindex="0"><a href="#">Optimize</a></li>
+                </ul>
               </li>
-              <li class="navbar-item">
+              <li id="menu-3" class="navbar-item">
                 <button class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fa fa-book"></i>
@@ -63,7 +65,8 @@
                   <span>Success stories</span>
                 </button>
               </li>
-              <li class="navbar-item">
+              <li role="separator"></li>
+              <li id="menu-4" class="navbar-item">
                 <button class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fab fa-github"></i>
@@ -187,19 +190,35 @@
       </div>
       <nav class="tabs is-boxed is-centered main-menu" id="nav">
         <ul role="tablist" aria-label="Learn more about our achievements tabs">
-          <li tabindex="0" data-target="pane-1" id="1" role="tab" aria-controls="pane-1" class="is-active" aria-selected="true">
+          <li tabindex="0"
+              data-target="pane-1"
+              id="1"
+              role="tab"
+              aria-controls="pane-1"
+              class="is-active"
+              aria-selected="true">
             <a>
               <span class="icon is-small"><i class="fa fa-image"></i></span>
               <span>Success stories</span>
             </a>
           </li>
-          <li tabindex="0" data-target="pane-3" id="3" role="tab" aria-controls="pane-3">
+          <li tabindex="0"
+              data-target="pane-2"
+              id="2"
+              role="tab"
+              aria-controls="pane-2"
+              aria-selected="false">
             <a>
               <span class="icon is-small"><i class="fab fa-superpowers"></i></span>
               <span>Our team</span>
             </a>
           </li>
-          <li tabindex="0" data-target="pane-4" id="4" role="tab" aria-controls="pane-4">
+          <li tabindex="0"
+              data-target="pane-3"
+              id="3"
+              role="tab"
+              aria-controls="pane-3"
+              aria-selected="false">
             <a>
               <span class="icon is-small"><i class="fa fa-film"></i></span>
               <span>Video</span>
@@ -261,7 +280,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="3">
+      <div class="tab-pane" id="pane-2" role="tabpanel" aria-labelledby="2">
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -296,7 +315,7 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="pane-4" role="tabpanel" aria-labelledby="4">
+      <div class="tab-pane" id="pane-3" role="tabpanel" aria-labelledby="3">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <h3 class="title has-text-centered">Inspired video</h3>
